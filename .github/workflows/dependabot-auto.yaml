@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+      - uses: ridedott/merge-me-action@v1
         with:
-          github-token: ${{ secrets.DODOCO_BOT_PAT }}
+          GITHUB_TOKEN: ${{ secrets.DODOCO_BOT_PAT }}
+          MERGE_METHOD: MERGE
+          GITHUB_LOGIN: dependabot[bot]
