@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	pb "github.com/trifoliumproj/nh/api/generated/github.com/trifoliumproj/api"
+	pb "github.com/trifoliumproj/nh/api/generated"
 	"google.golang.org/grpc"
 	"log"
 	"net"
