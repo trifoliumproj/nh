@@ -6,9 +6,11 @@ on:
       - dev
 jobs:
   build-and-deploy:
-    - uses: peter-evans/repository-dispatch@v1
-      with:
-        token: ${{ secrets.DODOCO_BOT_PAT }}
-        repository: trifoliumproj/deployment
-        event-type: kustomization
-        client-payload: '{ "ref": "${{ github.ref }}", "sha": "${{ github.sha }}" }'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.DODOCO_BOT_PAT }}
+          repository: trifoliumproj/deployment
+          event-type: kustomization
+          client-payload: '{ "ref": "${{ github.ref }}", "sha": "${{ github.sha }}" }'
