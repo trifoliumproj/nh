@@ -14,4 +14,4 @@ jobs:
           token: ${{ secrets.DODOCO_BOT_PAT }}
           repository: trifoliumproj/deployment
           event-type: kustomization
-          client-payload: '{ "ref": "${{ github.ref }}", "sha": "${{ github.sha }}" }'
+          client-payload: '{ "repository": "${{ github.repository }}", "ref": "${{ github.ref }}", "sha": "${{ github.sha }}" }'
